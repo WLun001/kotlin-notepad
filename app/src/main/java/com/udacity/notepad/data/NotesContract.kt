@@ -1,7 +1,5 @@
 package com.udacity.notepad.data
 
-import android.provider.BaseColumns
-
 import com.udacity.notepad.data.NotesContract.NoteTable.CREATED_AT
 import com.udacity.notepad.data.NotesContract.NoteTable.IS_PINNED
 import com.udacity.notepad.data.NotesContract.NoteTable.TEXT
@@ -25,11 +23,10 @@ object NotesContract {
         $TEXT TEXT,
         $IS_PINNED INTEGER,
         $CREATED_AT INTEGER,
-        $UPDATED_AT INTEGER)""
+        $UPDATED_AT INTEGER)"""
 
     val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + _TABLE_NAME
 
     val SQL_QUERY_ALL =
             "SELECT * FROM $_TABLE_NAME ORDER BY $CREATED_AT DESC"
-    }
 }
